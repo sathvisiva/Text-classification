@@ -1,0 +1,20 @@
+word_embeddings:
+  # Two types of word embedding algorithm (word2vec and glove) are supported.
+  # Just set the default to empty string to disable the word embeddings
+  default: glove
+  word2vec:
+    path: data/embeddings/GoogleNews-vectors-negative300.bin
+    # path: data/embeddings/news/w2v.bin
+    dimension: 300
+    binary: True
+  glove:
+    path: "../data/glove.twitter.27B.50d.txt"
+    dimension: 50
+    length: 400000
+
+datasets:
+  default: utterencedata
+  utterencedata:
+    path: "../data/utterances.txt"
+    params: '../config/parameters.json'
+
